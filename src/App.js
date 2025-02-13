@@ -35,12 +35,14 @@ function App() {
     const [words, setWords] = useState("")
 
   const handleDefinition=()=>{
-    if(!words){
-      alert("Please enter a word")
+    if (!words.trim()) {
+      setDefinition("Word not found in the dictionary.");
       return;
     }
-      const answer= dictionary.find((entry)=>entry.word.toLowerCase()===words.trim().toLowerCase())
-    setDefinition(answer? answer.meaning: "Word not found in the dictionary.")
+    const answer = dictionary.find(
+      (entry) => entry.word.toLowerCase() === words.trim().toLowerCase()
+    );
+    setDefinition(answer ? answer.meaning : "Word not found in the dictionary.");
     }
 
 
