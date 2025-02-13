@@ -31,16 +31,16 @@ function App() {
 
   ];
 
-    const [defination, setDefination]=useState("") 
+    const [definition, setDefinition]=useState("") 
     const [words, setWords] = useState("")
 
-  const handleDefination=()=>{
+  const handleDefinition=()=>{
     if(!words){
       alert("Please enter a word")
       return;
     }
       const answer= dictionary.find((entry)=>entry.word.toLowerCase()===words.trim().toLowerCase())
-    setDefination(answer? answer.meaning: "Word not found in the dictionary.")
+    setDefinition(answer? answer.meaning: "Word not found in the dictionary.")
     }
 
 
@@ -55,10 +55,10 @@ function App() {
     onChange={(e)=>setWords(e.target.value)}
     style={{width:"30vh", height:"5vh", borderRadius:"5px"}}
     />
-    <button onClick={handleDefination} style={{margin:"10px",gap:"10px",cursor:"pointer", width:"20vh", height:"5vh", background:"#0003"}}>Search</button>
+    <button onClick={handleDefinition} style={{margin:"10px",gap:"10px",cursor:"pointer", width:"20vh", height:"5vh", background:"#0003"}}>Search</button>
         </div>
         <div>
-          <h3>Defination:</h3><p>{defination}</p>
+          <h3>Definition:</h3><p>{definition}</p>
         </div>
     </div>
   );
