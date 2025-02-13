@@ -58,7 +58,8 @@ function App() {
     <button onClick={handleDefinition} style={{margin:"10px",gap:"10px",cursor:"pointer", width:"20vh", height:"5vh", background:"#0003"}}>Search</button>
         </div>
         <div>
-          <h3>Definition:</h3><p>{definition}</p>
+          <h3>Definition:</h3>
+          <p>{definition}</p>
         </div>
     </div>
   );
